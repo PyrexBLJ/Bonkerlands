@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="prx.cpp" />
+    <ClCompile Include="src\bltps\base\menu_base.cpp" />
+    <ClCompile Include="src\bltps\base\menu_item.cpp" />
+    <ClCompile Include="src\bltps\base\menu_tab.cpp" />
+    <ClCompile Include="src\bltps\game\functions.cpp" />
+    <ClCompile Include="src\bltps\ui\render\gui.cpp" />
+    <ClCompile Include="src\bltps\ui\ui.cpp" />
+    <ClCompile Include="src\scheduler.cpp" />
+    <ClCompile Include="src\bltps\ui\animations.cpp" />
+    <ClCompile Include="src\sdk\bltps\Core_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\Engine_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\GameFramework_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\GearboxFramework_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\GFxUI_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\WillowGame_functions.cpp" />
+    <ClCompile Include="src\sdk\osk.cpp" />
+    <ClCompile Include="src\bltps\ui\toast.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include.h" />
+    <ClInclude Include="src\bltps\base\menu_base.hpp" />
+    <ClInclude Include="src\bltps\base\menu_item.hpp" />
+    <ClInclude Include="src\bltps\base\menu_tab.hpp" />
+    <ClInclude Include="src\bltps\game\functions.hpp" />
+    <ClInclude Include="src\bltps\ui\render\gui.hpp" />
+    <ClInclude Include="src\bltps\ui\ui.hpp" />
+    <ClInclude Include="src\scheduler.hpp" />
+    <ClInclude Include="src\bltps\ui\animations.hpp" />
+    <ClInclude Include="src\bltps\ui\easing.hpp" />
+    <ClInclude Include="src\sdk\bltps\Core_classes.h" />
+    <ClInclude Include="src\sdk\bltps\Core_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\Core_structs.h" />
+    <ClInclude Include="src\sdk\bltps\Engine_classes.h" />
+    <ClInclude Include="src\sdk\bltps\Engine_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\Engine_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GameFramework_classes.h" />
+    <ClInclude Include="src\sdk\bltps\GameFramework_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GameFramework_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GearboxFramework_classes.h" />
+    <ClInclude Include="src\sdk\bltps\GearboxFramework_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GearboxFramework_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GFxUI_classes.h" />
+    <ClInclude Include="src\sdk\bltps\GFxUI_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GFxUI_structs.h" />
+    <ClInclude Include="src\sdk\bltps\WillowGame_classes.h" />
+    <ClInclude Include="src\sdk\bltps\WillowGame_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\WillowGame_structs.h" />
+    <ClInclude Include="src\sdk\osk.hpp" />
+    <ClInclude Include="src\defines.hpp" />
+    <ClInclude Include="src\bltps\ui\toast.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{c7235883-b815-4f34-b72a-fac849548c8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bo2">
+      <UniqueIdentifier>{8614d444-39a4-423c-9530-18c3985243d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bo2\base">
+      <UniqueIdentifier>{1c841e7d-8055-4df5-944e-ce8143905abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bo2\ui">
+      <UniqueIdentifier>{d8cc8193-f309-456c-866e-c7faa3f7e843}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bo2\game">
+      <UniqueIdentifier>{81d8e1b0-5ea2-43c9-b31e-11d562ea680b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bo2\game\structures">
+      <UniqueIdentifier>{a050fef4-44d9-44e9-9625-bc9c5281850b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bo2\ui\render">
+      <UniqueIdentifier>{8147315d-0b9e-4fd2-b002-dc635bb76efa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bo2\patches">
+      <UniqueIdentifier>{442ac248-b0a0-4c86-9c0e-b9f5594219cd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\bltps\ui\easing.cpp" />
+  </ItemGroup>
+</Project>

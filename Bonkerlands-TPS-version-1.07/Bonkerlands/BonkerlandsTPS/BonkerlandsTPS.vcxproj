@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|PS3">
+      <Configuration>Debug</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|PS3">
+      <Configuration>Release</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCTargetsPath Condition="'$(VCTargetsPath12)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath12)</VCTargetsPath>
+    <ProjectGuid>{86D2BBFC-3DB0-4E79-9B2B-11E40A6B5F14}</ProjectGuid>
+    <ProjectName>BonkerlandsTPS</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>SNC</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>SNC</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(DebuggerFlavor)'=='PS3Debugger'" Label="OverrideDebuggerDefaults">
+    <!--LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand-->
+    <!--LocalDebuggerCommandArguments></LocalDebuggerCommandArguments-->
+    <!--LocalDebuggerCommandLine>-r -e -m</LocalDebuggerCommandLine-->
+    <!--LocalRunCommandLine>-r</LocalRunCommandLine-->
+    <!--LocalTunerCommandLine></LocalTunerCommandLine-->
+    <!--LocalDebuggerFileServingDirectory>$(ProjectDir)</LocalDebuggerFileServingDirectory-->
+    <!--LocalDebuggerHomeDirectory>$(ProjectDir)</LocalDebuggerHomeDirectory-->
+    <!--LocalDebuggerProjectFile></LocalDebuggerProjectFile-->
+    <!--LocalDebuggerResetType>Soft</LocalDebuggerResetType-->
+    <!--LocalDebuggerClearTty>False</LocalDebuggerClearTty-->
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <IncludePath>$(SolutionDir)\libpsutil-master\libpsutil;$(IncludePath)</IncludePath>
+    <OutDir>..\PS3_Debug\</OutDir>
+    <IntDir>..\$(Platform)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <IncludePath>$(SolutionDir)\libpsutil-master\libpsutil;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <Warnings>TurnOffWarnings</Warnings>
+      <CppLanguageStd>Cpp11</CppLanguageStd>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>C:\usr\local\cell\samples\common\gcmutil;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <InlineFunctionDebug>false</InlineFunctionDebug>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SCE_PS3_ROOT)\target\ppu\lib\libc.a;$(SCE_PS3_ROOT)\target\ppu\lib\libcs.a;$(SCE_PS3_ROOT)\target\ppu\lib\libhttp_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libhttp_util_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libnet_stub.a;$(SN_PS3_PATH)\ppu\lib\sn\libsn.a;$(SCE_PS3_ROOT)\target\ppu\lib\libm.a;$(SCE_PS3_ROOT)\target\ppu\lib\libio_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\liblv2_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysutil_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha512.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libmd5.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysutil_np_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libnetctl_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libaudio_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysmodule_stub.a;-lmstreamThreadMP3;-lgcm_sys_stub;-lgcm_cmdasm;$(SolutionDir)PS3_Release\libpsutil.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateSnMapFile>None</GenerateSnMapFile>
+      <DataStripping>StripFuncsAndData</DataStripping>
+      <InfoStripping>StripSymsAndDebug</InfoStripping>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CppLanguageStd>Cpp11</CppLanguageStd>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SCE_PS3_ROOT)\target\ppu\lib\libc.a;$(SCE_PS3_ROOT)\target\ppu\lib\libcs.a;$(SCE_PS3_ROOT)\target\ppu\lib\libhttp_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libhttp_util_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libnet_stub.a;$(SN_PS3_PATH)\ppu\lib\sn\libsn.a;$(SCE_PS3_ROOT)\target\ppu\lib\libm.a;$(SCE_PS3_ROOT)\target\ppu\lib\libio_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\liblv2_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysutil_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libsha512.a;$(SCE_PS3_ROOT)\target\ppu\lib\hash\libmd5.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysutil_np_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libnetctl_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libaudio_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysmodule_stub.a;-llv2dbg_stub;-ldbg;-lgcm_cmd;-lgcm_sys_stub;-lvoice_stub;$(SolutionDir)\PS3_Release\libpsutil.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <DataStripping>StripFuncsAndData</DataStripping>
+      <GenerateSnMapFile>FullMapFile</GenerateSnMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include.h" />
+    <ClInclude Include="src\bltps\base\menu_base.hpp" />
+    <ClInclude Include="src\bltps\base\menu_item.hpp" />
+    <ClInclude Include="src\bltps\base\menu_tab.hpp" />
+    <ClInclude Include="src\bltps\game\functions.hpp" />
+    <ClInclude Include="src\bltps\ui\animations.hpp" />
+    <ClInclude Include="src\bltps\ui\easing.hpp" />
+    <ClInclude Include="src\bltps\ui\render\gui.hpp" />
+    <ClInclude Include="src\bltps\ui\toast.hpp" />
+    <ClInclude Include="src\bltps\ui\ui.hpp" />
+    <ClInclude Include="src\defines.hpp" />
+    <ClInclude Include="src\scheduler.hpp" />
+    <ClInclude Include="src\sdk\bltps\Core_classes.h" />
+    <ClInclude Include="src\sdk\bltps\Core_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\Core_structs.h" />
+    <ClInclude Include="src\sdk\bltps\Engine_classes.h" />
+    <ClInclude Include="src\sdk\bltps\Engine_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\Engine_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GameFramework_classes.h" />
+    <ClInclude Include="src\sdk\bltps\GameFramework_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GameFramework_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GearboxFramework_classes.h" />
+    <ClInclude Include="src\sdk\bltps\GearboxFramework_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GearboxFramework_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GFxUI_classes.h" />
+    <ClInclude Include="src\sdk\bltps\GFxUI_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\GFxUI_structs.h" />
+    <ClInclude Include="src\sdk\bltps\WillowGame_classes.h" />
+    <ClInclude Include="src\sdk\bltps\WillowGame_f_structs.h" />
+    <ClInclude Include="src\sdk\bltps\WillowGame_structs.h" />
+    <ClInclude Include="src\sdk\osk.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="prx.cpp" />
+    <ClCompile Include="src\bltps\base\menu_base.cpp" />
+    <ClCompile Include="src\bltps\base\menu_item.cpp" />
+    <ClCompile Include="src\bltps\base\menu_tab.cpp" />
+    <ClCompile Include="src\bltps\game\functions.cpp" />
+    <ClCompile Include="src\bltps\ui\animations.cpp" />
+    <ClCompile Include="src\bltps\ui\render\gui.cpp" />
+    <ClCompile Include="src\bltps\ui\toast.cpp" />
+    <ClCompile Include="src\bltps\ui\ui.cpp" />
+    <ClCompile Include="src\scheduler.cpp" />
+    <ClCompile Include="src\sdk\bltps\Core_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\Engine_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\GameFramework_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\GearboxFramework_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\GFxUI_functions.cpp" />
+    <ClCompile Include="src\sdk\bltps\WillowGame_functions.cpp" />
+    <ClCompile Include="src\sdk\osk.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\bltps\ui\easing.cpp" />
+  </ItemGroup>
+  <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

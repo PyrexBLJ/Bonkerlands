@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BonkerlandsTPS", "BonkerlandsTPS\BonkerlandsTPS.vcxproj", "{86D2BBFC-3DB0-4E79-9B2B-11E40A6B5F14}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpsutil", "libpsutil-master\libpsutil\libpsutil.vcxproj", "{2347B788-0A76-49C8-88BC-5D1A9D88B4A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|PS3 = Debug|PS3
+		Release|PS3 = Release|PS3
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86D2BBFC-3DB0-4E79-9B2B-11E40A6B5F14}.Debug|PS3.ActiveCfg = Debug|PS3
+		{86D2BBFC-3DB0-4E79-9B2B-11E40A6B5F14}.Debug|PS3.Build.0 = Debug|PS3
+		{86D2BBFC-3DB0-4E79-9B2B-11E40A6B5F14}.Release|PS3.ActiveCfg = Release|PS3
+		{86D2BBFC-3DB0-4E79-9B2B-11E40A6B5F14}.Release|PS3.Build.0 = Release|PS3
+		{2347B788-0A76-49C8-88BC-5D1A9D88B4A8}.Debug|PS3.ActiveCfg = Release|PS3
+		{2347B788-0A76-49C8-88BC-5D1A9D88B4A8}.Debug|PS3.Build.0 = Release|PS3
+		{2347B788-0A76-49C8-88BC-5D1A9D88B4A8}.Release|PS3.ActiveCfg = Release|PS3
+		{2347B788-0A76-49C8-88BC-5D1A9D88B4A8}.Release|PS3.Build.0 = Release|PS3
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4E64942-B593-4157-A554-51F546B395D7}
+	EndGlobalSection
+EndGlobal
