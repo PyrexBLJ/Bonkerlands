@@ -1,0 +1,23 @@
+﻿  sha.cpp
+  socket.cpp
+  string.cpp
+  rc4.cpp
+  md5.cpp
+  filesystem.cpp
+  imports.cpp
+  memory.cpp
+  symbol.cpp
+  math.cpp
+  tiger.cpp
+  httpclient.cpp
+  syscalls.cpp
+C:\Users\BETFR\Documents\Visual Studio 2015\Projects\Bonkerlands-BL2-version-1.7\Bonkerlands\libpsutil-master\libpsutil\system/memory.hpp(81,8): warning 429: qualified name is not allowed in member declaration
+  
+.\system/memory.hpp(81,8): warning 429: qualified name is not allowed in member declaration
+  
+.\system/memory.hpp(81,8): warning 429: qualified name is not allowed in member declaration
+  
+.\system/memory.hpp(81,8): warning 429: qualified name is not allowed in member declaration
+  
+  libpsutil.vcxproj -> C:\Users\BETFR\Documents\Visual Studio 2015\Projects\Bonkerlands-BL2-version-1.7\Bonkerlands\PS3_Release\libpsutil.a
+          1 file(s) copied.
